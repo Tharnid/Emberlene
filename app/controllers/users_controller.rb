@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     # @users = User.paginate(:page => params[:page])
     @users = User.paginate(:page => params[:page],
-                           :per_page => 20,
+                           :per_page => 5,
                            :order => 'created_at DESC')
     @title = "All users"
   end
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # @microposts = @user.microposts.paginate(:page => params[:page])
     @microposts = @user.microposts.paginate(:page => params[:page],
-                                                :per_page => 20,
+                                                :per_page => 5,
                                                 :order => 'created_at DESC')
     @title = @user.name
   end
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # @users = @user.following.paginate(:page => params[:page])
     @users = @user.following.paginate(:page => params[:page],
-                                                :per_page => 20,
+                                                :per_page => 5,
                                                 :order => 'created_at DESC')
     render 'show_follow'
   end
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # @users = @user.followers.paginate(:page => params[:page])
     @users = @user.followers.paginate(:page => params[:page],
-                                                :per_page => 20,
+                                                :per_page => 5,
                                                 :order => 'created_at DESC')
     render 'show_follow'
   end
