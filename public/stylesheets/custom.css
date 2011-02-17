@@ -3,23 +3,24 @@ container {
 }
 
 body {
-  background: #cff;
+  background: #08436D;
 }
 
 header {
   padding-top: 20px;
+  
 }
 
 header img {
   padding: 1em;
-  background: #fff;
+  background: #FFFF99;
 }
 
 section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
-  background: #fff;
+  background: #70AAD3;
 }
 
 section h1 {
@@ -106,6 +107,7 @@ footer {
   width: 710px;
   margin-left: auto;
   margin-right: auto;
+ 
 }
 
 footer nav {
